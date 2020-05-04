@@ -1,28 +1,15 @@
-
-
-
-movingrect;
-function setup() {
-  createCanvas(1200,400);
-
-  
+var r = 0;
+var g = 150;
+var b = 255;
+function setup(){
+  var canvas = createCanvas(600,400);
 }
+function draw(){
+  r = map(mouseX,0,255,204,0);
+  g = map(mouseX,0,50,205,50);
+  b = map(mouseX,0,400,0,255);
 
-function draw() {
-  background("white");  
-
-
-
-if(mouseX>=0 && mouseX<=400){
-  background("orange");
-}
-else if (mouseX>=400 && mouseX<=800){
-  background("green");
-}
-else if (mouseX>=800 && mouseX<=1200){
-  background("blue");
-}
-
-  drawSprites();
-  ellipse(mouseX,mouseY,30,30);
+  background(r,g,b);
+  fill("Black");
+  ellipse(mouseX,200,64,64);
 }
